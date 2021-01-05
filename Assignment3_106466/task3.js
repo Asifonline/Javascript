@@ -1,0 +1,28 @@
+//Initialize an array with color names. Display the array elements in your browser
+var colors = ['red', 'green'];
+console.log("Initial colors are :" + colors + "</br>");
+var firstColor = prompt("Please add a color at the begining");
+colors.unshift(firstColor);
+console.log("Color added at the begining is " + colors[0] + "</br>");
+console.log(" Colors are now changed to :" + colors + "</br>");
+var lastColor = prompt("Please add a color at the end");
+colors.push(lastColor);
+console.log("The color at the end is now " + lastColor +"</br>");
+console.log(" Colors are now changed to :" + colors + "</br>");
+var newColor = prompt(" Please add one color at beginning ");
+colors.unshift(newColor);
+var secondNewColor = prompt(" Please add one more color at beginning ");
+colors.unshift(secondNewColor);
+console.log( " List of colors after adding two colors at start is now : " + colors + "</br>");
+colors.shift();
+console.log( " Updated list of colors after deleting first color is now : " + colors + "</br>");
+colors.pop();
+console.log( " Updated list of colors after deleting last color is now : " + colors + "</br>");
+var insertIndex = prompt("Please add index number to add a color up to " + colors.length);
+var indexedColor = prompt(" Please add the color now ");
+colors.splice(parseInt(insertIndex),0, indexedColor);
+console.log(" Updated list of colors after inserting a color at " + insertIndex + " is now : " + colors + "</br>");
+var deleteIndex = prompt("Please add index number to delete a color up to " + colors.length);
+var endIndex = prompt("How many items you want to delete, range is 0 to " + colors.length);
+colors.splice(parseInt(deleteIndex), parseInt(endIndex));
+console.log("Final colors left after deleting from index "+ deleteIndex +" to " + endIndex +" are :" + colors);
